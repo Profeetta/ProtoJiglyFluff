@@ -13,3 +13,7 @@ class _ShowDataState extends State<ShowData> {
     return Container();
   }
 }
+
+ShowTheData() {
+  return print("Dudu");
+}

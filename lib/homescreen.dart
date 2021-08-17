@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <TextButton>[
             TextButton(
-              onPressed: () {},
+              onPressed: AddTheData(),
               child: Icon(
                 Icons.add_sharp,
                 color: Colors.white,
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: ShowTheData(),
               child: Icon(
                 Icons.picture_as_pdf_sharp,
                 color: Colors.white,

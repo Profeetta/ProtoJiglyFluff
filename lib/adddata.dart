@@ -13,3 +13,7 @@ class _AddDataState extends State<AddData> {
     return Container();
   }
 }
+
+AddTheData() {
+  return print("Didi");
+}
