@@ -25,8 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <TextButton>[
             TextButton(
-              onPressed: () async {
-                await callApi();
+              onPressed: () {
+                /*async {
+                await callApi();*/
               },
               child: Icon(
                 Icons.add_sharp,
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             TextButton(
-              onPressed: showTheData(),
+              onPressed: () {},
               child: Icon(
                 Icons.picture_as_pdf_sharp,
                 color: Colors.white,
