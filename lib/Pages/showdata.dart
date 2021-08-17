@@ -14,6 +14,6 @@ class _ShowDataState extends State<ShowData> {
   }
 }
 
-ShowTheData() {
+showTheData() {
   return print("Dudu");
 }

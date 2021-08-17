@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:proto_jigglyfluff/Services/api.dart';
 
-import 'adddata.dart';
+//import 'adddata.dart';
 import 'showdata.dart';
+import 'package:proto_jigglyfluff/main.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,7 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <TextButton>[
             TextButton(
-              onPressed: AddTheData(),
+              onPressed: () async {
+                await callApi();
+              },
               child: Icon(
                 Icons.add_sharp,
                 color: Colors.white,
@@ -31,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             TextButton(
-              onPressed: ShowTheData(),
+              onPressed: showTheData(),
               child: Icon(
                 Icons.picture_as_pdf_sharp,
                 color: Colors.white,

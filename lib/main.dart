@@ -1,8 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
-import 'homescreen.dart';
+import 'package:proto_jigglyfluff/Pages/homescreen.dart';
+//import 'user.dart';
 
 void main() {
   runApp(ProtoJigglyFluff());

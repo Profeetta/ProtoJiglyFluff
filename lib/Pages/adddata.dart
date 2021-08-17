@@ -14,6 +14,6 @@ class _AddDataState extends State<AddData> {
   }
 }
 
-AddTheData() {
+addTheData() {
   return print("Didi");
 }
