@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 import 'homescreen.dart';
@@ -17,7 +19,10 @@ class _ProtoJigglyFluffState extends State<ProtoJigglyFluff> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        primaryColor: Colors.grey,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: HomeScreen(),
     );
   }
