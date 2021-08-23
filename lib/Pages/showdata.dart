@@ -1,6 +1,7 @@
-/*import 'package:flutter/material.dart';
-import 'package:proto_jigglyfluff/Services/api.dart';
-import 'dart:convert';
+import 'package:flutter/material.dart';
+//import 'package:proto_jigglyfluff/Services/api.dart';
+//import 'dart:convert';
+//import 'package:http/http.dart' as http;
 
 class ShowData extends StatefulWidget {
   const ShowData({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class _ShowDataState extends State<ShowData> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<DataTable>(
-      future: fetchData(),
+      future: null,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text("There was an error");
@@ -21,7 +22,8 @@ class _ShowDataState extends State<ShowData> {
         } else {
           return Text("No value yet");
         }
+        throw Exception();
       },
     );
   }
-}*/
+}

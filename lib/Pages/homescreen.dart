@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:proto_jigglyfluff/Pages/trytoshowdata.dart';
 import 'package:proto_jigglyfluff/Services/api.dart';
 
 //import 'adddata.dart';
-import 'showdata.dart';
-import 'package:proto_jigglyfluff/main.dart';
+//import 'showdata.dart';
+//import 'package:proto_jigglyfluff/main.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -25,9 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <TextButton>[
             TextButton(
-              onPressed: () {
-                /*async {
-                await callApi();*/
+              onPressed: () async {
+                await callApi();
               },
               child: Icon(
                 Icons.add_sharp,
@@ -36,7 +36,13 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => TryToShowData(),
+                  ),
+                );
+              },
               child: Icon(
                 Icons.picture_as_pdf_sharp,
                 color: Colors.white,

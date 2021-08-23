@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:proto_jigglyfluff/Services/api.dart';
-import 'package:proto_jigglyfluff/information/patientinfo.dart';
+//import 'package:proto_jigglyfluff/Services/api.dart';
+//import 'package:proto_jigglyfluff/information/patientinfo.dart';
 
 class TryToShowData extends StatefulWidget {
   const TryToShowData({Key? key}) : super(key: key);
@@ -37,10 +37,32 @@ class _TryToShowDataState extends State<TryToShowData> {
               label: Text("Transformation"),
             ),
           ],
-          rows: List.generate(){
-            
-          },),
+          rows: [
+            DataRow(
+              cells: <DataCell>[
+                DataCell(
+                  Text("21"),
+                ),
+                DataCell(
+                  Text("1"),
+                ),
+                DataCell(
+                  Text("ID"),
+                ),
+                DataCell(
+                  Text("4"),
+                ),
+                DataCell(
+                  Text("1"),
+                ),
+                DataCell(
+                  Text("Don't know"),
+                ),
+              ],
+            ),
+          ],
         ),
-      );
+      ),
+    );
   }
 }
