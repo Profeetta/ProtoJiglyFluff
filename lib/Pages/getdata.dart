@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import '/information/patientinfo.dart';
 import '/information/overlayinfo.dart';*/
 
-class ShowData extends StatefulWidget {
-  const ShowData({Key? key}) : super(key: key);
+class GetData extends StatefulWidget {
+  const GetData({Key? key}) : super(key: key);
 
   @override
-  _ShowDataState createState() => _ShowDataState();
+  _GetDataState createState() => _GetDataState();
 }
 
-class _ShowDataState extends State<ShowData> {
+class _GetDataState extends State<GetData> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<DataTable>(

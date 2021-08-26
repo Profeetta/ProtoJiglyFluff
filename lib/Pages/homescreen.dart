@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proto_jigglyfluff/Pages/showdata.dart';
+import 'package:proto_jigglyfluff/Pages/getdata.dart';
 import 'package:proto_jigglyfluff/Services/api.dart';
 
 //import 'adddata.dart';
@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => ShowData(),
+                    builder: (context) => GetData(),
                   ),
                 );
               },
