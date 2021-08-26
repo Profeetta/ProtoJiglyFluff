@@ -1,37 +1,94 @@
 class Patient {
-  final String riskClass;
-  final String priority;
-  final int varID;
+  final String label;
+  final int index;
+  final String variableId;
   final String dataType;
+  final String dataNumType;
   final bool include;
-  final int indx;
+  final String riskClass;
   final String transformation;
+  final String imputeMissing;
+  final String sparse;
+  final int priority;
+  final int min;
+  final int max;
+  final int resolution;
+  final String classes;
+  final List<int> bins;
+  final String binningMethod;
+  final String format;
+  final String description;
+  final String mapping;
+  final String rMapping;
 
   Patient(
-    this.riskClass,
-    this.priority,
+    this.label,
+    this.index,
+    this.variableId,
     this.dataType,
-    this.varID,
+    this.dataNumType,
     this.include,
-    this.indx,
+    this.riskClass,
     this.transformation,
+    this.imputeMissing,
+    this.sparse,
+    this.priority,
+    this.min,
+    this.max,
+    this.resolution,
+    this.classes,
+    this.bins,
+    this.binningMethod,
+    this.format,
+    this.description,
+    this.mapping,
+    this.rMapping,
   );
 
   Patient.fromJson(Map<String, dynamic> json)
-      : riskClass = json["risk class"],
-        priority = json["priority"],
-        dataType = json["data type"],
-        varID = json["variable ID"],
-        include = json["include"],
+      : label = json["label"],
+        index = json["index"],
+        variableId = json["variable_id"],
+        dataType = json["dtype"],
+        dataNumType = json["dtype_numpy"],
+        include = json["included"],
+        riskClass = json["risk_class"],
         transformation = json["transformation"],
-        indx = json["index"];
+        imputeMissing = json["impute_missing"],
+        sparse = json["sparse"],
+        priority = json["priority"],
+        min = json["min"],
+        max = json["max"],
+        resolution = json["resolution"],
+        classes = json["classes"],
+        bins = json["bins"],
+        binningMethod = json["binning_method"],
+        format = json["format"],
+        description = json["description"],
+        mapping = json["mapping"],
+        rMapping = json["rmapping"];
 
   Map<String, dynamic> toJson() => {
-        "risk class": riskClass,
-        "priority": priority,
-        "data type": dataType,
-        "variable ID": varID,
-        "include": include,
+        "label": label,
+        "index": index,
+        "variable_id": variableId,
+        "dtype": dataType,
+        "dtype_numpy": dataNumType,
+        "included": include,
+        "risk_class": riskClass,
         "transformation": transformation,
+        "impute_missing": imputeMissing,
+        "sparse": sparse,
+        "priority": priority,
+        "min": min,
+        "max": max,
+        "resolution": resolution,
+        "classes": classes,
+        "bins": bins,
+        "binning_method": binningMethod,
+        "format": format,
+        "description": description,
+        "mapping": mapping,
+        "rmapping": rMapping,
       };
 }
