@@ -4,23 +4,24 @@ import 'package:proto_jigglyfluff/datagridexamplething/datagridex.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 import 'datagridex.dart';
+import '/information/overlayinfo.dart';
 
-late PatientDataSource _patientDataSource;
+late InformationDataSource _informationDataSource;
 
-/*List<Patient> _patients = <Patient>[];
+List<OverlayInfo> _information = <OverlayInfo>[];
 
 @override
 void initState() {
   initState();
-  _patients = getPatientData();
-  _patientDataSource = PatientDataSource(patients: _patients);
-}*/
+  _information = _information; //getInformationData();
+  //_informationDataSource = InformationDataSource(info: _information);
+}
 
 @override
 Widget build(BuildContext context) {
   return Scaffold(
     body: SfDataGrid(
-      source: _patientDataSource,
+      source: _informationDataSource,
       columnWidthMode: ColumnWidthMode.lastColumnFill,
       columns: <GridColumn>[
         GridColumn(

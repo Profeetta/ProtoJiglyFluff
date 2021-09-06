@@ -1,35 +1,31 @@
 import 'package:flutter/cupertino.dart';
+import 'package:proto_jigglyfluff/information/overlayinfo.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-import '/information/patientinfo.dart';
+import '/information/overlayinfo.dart';
 
-class PatientDataSource extends DataGridSource {
-  PatientDataSource(List<Patient> patients) {
-    dataGridRows = patients
+class InformationDataSource extends DataGridSource {
+  InformationDataSource(List<OverlayInfo> info) {
+    dataGridRows = info
         .map<DataGridRow>(
           (dataGridRow) => DataGridRow(
             cells: [
-              DataGridCell<String>(columnName: "Label", value: dataGridRow.label),
-              DataGridCell<int>(columnName: "Index", value: dataGridRow.index),
-              DataGridCell<String>(columnName: "Variable ID", value: dataGridRow.variableId),
-              DataGridCell<String>(columnName: "Data type", value: dataGridRow.dataType),
-              DataGridCell<String>(columnName: "Data num type", value: dataGridRow.dataNumType),
-              DataGridCell<bool>(columnName: "Include", value: dataGridRow.include),
-              DataGridCell<String>(columnName: "Risk Class", value: dataGridRow.riskClass),
-              DataGridCell<String>(columnName: "Transformation", value: dataGridRow.transformation),
-              DataGridCell<String>(columnName: "Impute Missing", value: dataGridRow.imputeMissing),
-              DataGridCell<String>(columnName: "Sparse", value: dataGridRow.sparse),
-              DataGridCell<int>(columnName: "Priority", value: dataGridRow.priority),
-              DataGridCell<int>(columnName: "Min", value: dataGridRow.min),
-              DataGridCell<int>(columnName: "Max", value: dataGridRow.max),
-              DataGridCell<int>(columnName: "Resolution", value: dataGridRow.resolution),
-              DataGridCell<String>(columnName: "Classes", value: dataGridRow.classes),
-              DataGridCell<List<int>>(columnName: "Bins", value: dataGridRow.bins),
-              DataGridCell<String>(columnName: "Binning Method", value: dataGridRow.binningMethod),
-              DataGridCell<String>(columnName: "Format", value: dataGridRow.format),
-              DataGridCell<String>(columnName: "Description", value: dataGridRow.description),
-              DataGridCell<String>(columnName: "Mapping", value: dataGridRow.mapping),
-              DataGridCell<String>(columnName: "RMapping", value: dataGridRow.rMapping)
+              DataGridCell<int>(columnName: "Age", value: dataGridRow.age),
+              DataGridCell<int>(columnName: "Cigs per day", value: dataGridRow.cigsPerDay),
+              DataGridCell<int>(columnName: "Tot Chol", value: dataGridRow.totChol),
+              DataGridCell<int>(columnName: "SysPB", value: dataGridRow.sysPB),
+              DataGridCell<int>(columnName: "DiaBP", value: dataGridRow.diaBP),
+              DataGridCell<int>(columnName: "BMI", value: dataGridRow.bMI),
+              DataGridCell<int>(columnName: "Heart rate", value: dataGridRow.heartRate),
+              DataGridCell<int>(columnName: "Glucose", value: dataGridRow.glucose),
+              DataGridCell<int>(columnName: "Male", value: dataGridRow.male),
+              DataGridCell<int>(columnName: "Education", value: dataGridRow.education),
+              DataGridCell<int>(columnName: "Current Smoker", value: dataGridRow.currentSmoker),
+              DataGridCell<int>(columnName: "BP Meds", value: dataGridRow.bPMeds),
+              DataGridCell<int>(columnName: "Prevalent Stroke", value: dataGridRow.prevalentStroke),
+              DataGridCell<int>(columnName: "Prevalent Hyp", value: dataGridRow.prevalentHyp),
+              DataGridCell<int>(columnName: "Diabetes", value: dataGridRow.diabetes),
+              DataGridCell<int>(columnName: "Ten Year CHD", value: dataGridRow.tenYearCHD)
             ],
           ),
         )
@@ -47,7 +43,7 @@ class PatientDataSource extends DataGridSource {
         cells: row.getCells().map<Widget>(
       (dataGridCell) {
         return Container(
-          alignment: (dataGridCell.columnName == "Label" || dataGridCell.columnName == "RMapping")
+          alignment: (dataGridCell.columnName == "Age" || dataGridCell.columnName == "Ten Year CHD")
               ? Alignment.centerRight
               : Alignment.centerLeft,
           padding: EdgeInsets.symmetric(horizontal: 15),

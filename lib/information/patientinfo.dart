@@ -1,4 +1,4 @@
-class Patient {
+/*class Patient {
   final String label;
   final int index;
   final String variableId;
@@ -91,4 +91,4 @@ class Patient {
         "mapping": mapping,
         "rmapping": rMapping,
       };
-}
+}*/
