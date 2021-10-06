@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
-import 'package:proto_jigglyfluff/information/overlayinfo.dart';
+import 'package:proto_jigglyfluff/information/infodatasource.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
-import '/information/overlayinfo.dart';
+import '../information/infodatasource.dart';
 
 class InformationDataSource extends DataGridSource {
-  InformationDataSource(List<OverlayInfo> info) {
-    dataGridRows = info
+  InformationDataSource({required List<InfoDataSource> infos}) {
+    dataGridRows = infos
         .map<DataGridRow>(
           (dataGridRow) => DataGridRow(
             cells: [

@@ -1,4 +1,4 @@
-class OverlayInfo {
+class InfoDataSource {
   final int age;
   final int cigsPerDay;
   final int totChol;
@@ -16,7 +16,7 @@ class OverlayInfo {
   final int diabetes;
   final int tenYearCHD;
 
-  OverlayInfo(
+  InfoDataSource(
     this.age,
     this.cigsPerDay,
     this.totChol,
@@ -35,7 +35,7 @@ class OverlayInfo {
     this.tenYearCHD,
   );
 
-  OverlayInfo.fromJson(Map<String, dynamic> json)
+  InfoDataSource.fromJson(Map<String, dynamic> json)
       : age = json["age"],
         cigsPerDay = json["cigsPerDay"],
         totChol = json["totChol"],
